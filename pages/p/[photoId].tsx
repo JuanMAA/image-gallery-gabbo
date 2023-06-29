@@ -12,7 +12,7 @@ const Home: NextPage = ({ currentPhoto }: { currentPhoto: ImageProps }) => {
   const { photoId } = router.query
   let index = Number(photoId)
 
-  const currentPhotoUrl = `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_2560/${currentPhoto.public_id}.${currentPhoto.format}`
+  const currentPhotoUrl = `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}image/upload/co_rgb:FDFDFD,l_text:arial_100_bold_normal_left:media.gabbo/fl_layer_apply,g_south_west,x_90,y_90,w_2560/${currentPhoto.public_id}.${currentPhoto.format}`
 
   return (
     <>

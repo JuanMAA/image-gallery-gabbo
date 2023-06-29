@@ -74,7 +74,7 @@ export default function SharedModal({
                 <Image
                   src={`https://res.cloudinary.com/${
                     process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
-                  }/image/upload/c_scale,${navigation ? 'w_1280' : 'w_1920'}/${
+                  }/image/upload/co_rgb:FDFDFD,l_text:arial_60_bold_normal_left:media.gabbo/fl_layer_apply,g_south_west,x_90,y_90,c_scale,${navigation ? 'w_1280' : 'w_1920'}/${
                     currentImage.public_id
                   }.${currentImage.format}`}
                   width={navigation ? 1280 : 1920}
@@ -118,7 +118,7 @@ export default function SharedModal({
               <div className="absolute top-0 right-0 flex items-center gap-2 p-3 text-white">
                 {navigation ? (
                   <a
-                    href={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/${currentImage.public_id}.${currentImage.format}`}
+                    href={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/co_rgb:FDFDFD,l_text:arial_100_bold_normal_left:media.gabbo/fl_layer_apply,g_south_west,x_90,y_90/${currentImage.public_id}.${currentImage.format}`}
                     className="rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
                     target="_blank"
                     title="Open fullsize version"
@@ -140,7 +140,7 @@ export default function SharedModal({
                 <button
                   onClick={() =>
                     downloadPhoto(
-                      `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/${currentImage.public_id}.${currentImage.format}`,
+                      `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/co_rgb:FDFDFD,l_text:arial_100_bold_normal_left:media.gabbo/fl_layer_apply,g_south_west,x_90,y_90/${currentImage.public_id}.${currentImage.format}`,
                       `${index}.jpg`
                     )
                   }
@@ -203,7 +203,7 @@ export default function SharedModal({
                             ? 'brightness-110 hover:brightness-110'
                             : 'brightness-50 contrast-125 hover:brightness-75'
                         } h-full transform object-cover transition`}
-                        src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_180/${public_id}.${format}`}
+                        src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/co_rgb:FDFDFD,l_text:arial_100_bold_normal_left:media.gabbo/fl_layer_apply,g_south_west,x_90,y_90,c_scale,w_180/${public_id}.${format}`}
                       />
                     </motion.button>
                   ))}
